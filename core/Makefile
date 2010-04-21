@@ -5928,6 +5928,8 @@ ifeq ($(BUILDING_WITH_VSDK),true)
 	$(hide) echo "building_with_vsdk=true" >> $@
 endif
 
+ifneq ($(BOARD_PARTIAL_OTA_UPDATE_PARTITIONS_LIST),)
+
 $(call declare-0p-target,$(INSTALLED_FASTBOOT_INFO_TARGET))
 
 .PHONY: fastboot_info
